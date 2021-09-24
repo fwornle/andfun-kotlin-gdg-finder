@@ -13,27 +13,32 @@
             tools:context=".home.HomeFragment">
 
         <ImageView
-                android:id="@+id/image"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:srcCompat="@drawable/behind"
-                android:scaleType="centerCrop"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="4:3"/>
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/behind"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/image_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="4:3"
+            />
 
         <!-- TODO (01) Add textSize and textColor attributes to the title and
              subtitle TextViews. -->
         <TextView
-                android:id="@+id/title"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/about_google_developer_groups"
-                android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@id/image"
-                app:layout_constraintEnd_toStartOf="@+id/end_grid"
-                app:layout_constraintStart_toStartOf="@+id/start_grid"/>
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lobster_two"
+            android:text="@string/about_google_developer_groups"
+            android:textColor="#555555"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/end_grid"
+            app:layout_constraintStart_toStartOf="@+id/start_grid"
+            app:layout_constraintTop_toBottomOf="@id/image" />
 
         <TextView
                 android:id="@+id/intro_text"
@@ -47,6 +52,8 @@
 
         <TextView
                 android:id="@+id/subtitle"
+                android:textColor="#555555"
+                android:textSize="18sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/gdgs_are"
@@ -66,17 +73,19 @@
                 app:layout_constraintEnd_toStartOf="@+id/end_grid"/>
 
         <ImageView
-                android:id="@+id/end_image"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:scaleType="centerCrop"
-                android:layout_marginTop="16dp"
-                app:srcCompat="@drawable/wtm"
-                app:layout_constraintTop_toBottomOf="@id/description"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintDimensionRatio="3:1.5"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+            android:id="@+id/end_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/image_2"
+            app:srcCompat="@drawable/wtm"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="3:1.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
         <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/start_grid"
